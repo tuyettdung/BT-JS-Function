@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT JS BUỔI 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="container">
+            <div class=" mt-5 d-flex align-items-start justify-content-center ">
+                <div class="p-2 mt-4 border border-info rounded nav flex-column nav-pills me-3" id="v-pills-tab"
+                    role="tablist" aria-orientation="vertical">
+                    <button class="mb-4  nav-link active shadow " id="v-pills-b1-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-b1" type="button" role="tab" aria-controls="v-b1" aria-selected="true">
+                        Bài 1</button>
+                    <button class="mb-4  nav-link shadow" id="v-pills-b2-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-b2" type="button" role="tab" aria-controls="v-pills-b2"
+                        aria-selected="false">Bài 2</button>
+                    <button class="mb-4  nav-link shadow" id="v-pills-b3-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-b3" type="button" role="tab" aria-controls="v-pills-b3"
+                        aria-selected="false">Bài 3</button>
+                    <button class="mb-4  nav-link shadow" id="v-pills-b4-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-b4" type="button" role="tab" aria-controls="v-pills-b4"
+                        aria-selected="false">Bài 4</button>
+
+                </div>
+                <div class="tab-content w-100" id="v-pills-tabContent">
+                    <div class=" tab-pane fade show active" id="v-b1" role="tabpanel" aria-labelledby="v-pills-b1-tab"
+                        tabindex="0">
+                        <h3>Bài tập 1: Quản lý tuyển sinh</h3>
+                        <div class="alert alert-warning">
+                            Viết chương trình nhập:
+                            <br>
+                            Điểm chuẩn của hội đồng
+                            <br>
+                            Điểm 3 môn thi
+                            <br>
+                            Khu vực (nhập X nếu không thuộc khu vực ưu tiên) và Đối tượng(nhập 0 nếu không thuộc đối
+                            tượng ưu tiên)
+                            <br>
+                            Cho biết thí sinh đậu hay rớt và tổng số điểm đạt được
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-4">
+                                <input id="diemChuan" class="form-control" placeholder="Điểm chuẩn" type="number"
+                                    min="1" max="30">
+                            </div>
+                            <div class="col-4">
+                                <select name="Chọn khu vực" id="khuVuc" class="form-control">
+                                    <option value="">Chọn khu vực</option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <select name="Chọn đối tượng" id="doiTuong" class="form-control">
+                                    <option value="">Chọn đối tượng</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-3 row form-group">
+                            <div class="col-4">
+                                <input id="mon1" type="number" min="0" max="10" placeholder="Điểm môn thứ 1"
+                                    class="form-control">
+                            </div>
+                            <div class="col-4">
+                                <input id="mon2" type="number" min="0" max="10" placeholder="Điểm môn thứ 2"
+                                    class="form-control">
+                            </div>
+                            <div class="col-4">
+                                <input id="mon3" type="number" min="0" max="10" placeholder="Điểm môn thứ 3"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <button class="mt-3 btn btn-primary" id="btn-bai-1">Kết quả</button>
+                        <div id="ket-qua-b1" class="mt-3 p-3 alert alert-info">
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-b2" role="tabpanel" aria-labelledby="v-pills-b2-tab"
+                        tabindex="0">
+                        <h3>Bài tập 2: Tính tiền điện</h3>
+                        <div class="alert alert-warning">
+                            Viết chương trình nhập vào thông tin tiêu thụ điện. <br>
+                            Tính và xuất Tiền trả theo quy tắc:<br />
+                            - 50kw đầu: 500đ/kw<br />
+                            - 50kw kế: 650đ/kw<br />
+                            - 100kw kế: 850đ/kw <br />
+                            - 150kw kế: 1100đ/kw<br />
+                            - còn lại: 1300đ/kw
+                        </div>
+                        <div class="form-group row">
+                            <div class=" col-4">
+                                <input id="hoTen" class="form-control" placeholder="Nhập Họ tên">
+                            </div>
+                            <div class=" col-4">
+                                <input type="number" id="soKw" min="1" max="100000" class="form-control"
+                                    placeholder="Nhập số KW">
+                            </div>
+                        </div>
+                        <button class="mt-3 btn btn-primary" id="btnTinhTienDien">Tính tiền điện</button>
+                        <div id="ket-qua-b2" class="mt-3 p-3 alert alert-info">
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-b3" role="tabpanel" aria-labelledby="v-pills-b3-tab"
+                        tabindex="0">
+                        <h3>Bài tập 3: Tính thuế thu nhập cá nhân</h3>
+                        <div class="alert alert-warning">
+                            Viết chương trình nhập vào thông tin của 1 cá nhân (Họ tên, tổng thu nhập năm, số
+                            người phụ thuộc). Tính và xuất thuế thu nhập cá nhân phải trả theo quy định sau:
+                            <br>
+                            Thu nhập chịu thuế = Tổng thu nhập năm - 4tr- Số người phụ thuộc * 1.6tr
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4">
+                                <input class="form-control" id="hoTenB3" placeholder="Nhập Họ tên">
+                            </div>
+                            <div class="col-4">
+                                <input type="number" min="1"  max="10000000000" class="form-control" id="tongThuNhapNam" placeholder="Tổng thu nhập năm">
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="number" min="1" max="100"
+                                id="soNguoiPhuThuoc" placeholder="Số người phụ thuộc">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-3" id="btnTinhTienThue">Tính tiền thuế</button>
+                        <div id="ket-qua-b3" class="mt-3 p-3 alert alert-info">
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-b4" role="tabpanel" aria-labelledby="v-pills-b4-tab"
+                        tabindex="0">
+                        <h3> Bài 4: Tính tiền cáp</h3>
+                        <div class="alert alert-warning">
+                            Viết chương trình tính hóa đơn khách hàng cho một công ty cáp. Có 2 loại khách hàng:
+                            Nhà dân và doanh nghiệp. Có 2 mức giá tính tiền cáp:
+                            <br>
+                            Nhà dân:<br>
+                            • Phí xử lý hóa đơn: 4.5$<br>
+                            • Phí dịch vụ cơ bản: 20.5$<br>
+                            • Thuê kênh cao cấp: 7.5$ / kênh<br>
+                            2. Doanh nghiệp<br>
+                            • Phí xử lý hóa đơn: 15$<br>
+                            • Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$ / kết nối<br>
+                            • Thuê kênh cao cấp: 50$ / kênh<br>
+                            Chương trình cho phép nhập vào Mã khách hàng, loại khách hàng, số kết nối, số kênh
+                            cao cấp. Nếu chọn loại khách hàng là Doanh nghiệp ô nhập số kết nối sẽ hiện lên, nếu
+                            chọn loại khách hàng là nhà dân thì ô nhập kết nối sẽ ẩn đi hoặc disabled
+                        </div>
+                        <div class="form-group row" id="content-b4">
+                            <div class="col-4">
+                                <select class="form-control" id="loaiKH">
+                                    <option value="">Chọn loại khách hàng</option>
+                                    <option value="nhaDan">Nhà dân</option>
+                                    <option value="doanhNghiep">Doanh nghiệp</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <input id="maKH" class="form-control" placeholder="Nhập mã khách hàng">
+                            </div>
+                            <div class="col-4">
+                                <input type="number" min="1" max="1000" id="soKenh" class="form-control" placeholder="Số kênh đăng ký">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-3" id="btnTinhTienCap" >Tính tiền cáp</button>
+                        <div id="ket-qua-b4" class="mt-3 p-3 alert alert-info">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
